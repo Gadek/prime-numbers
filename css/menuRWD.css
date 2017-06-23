@@ -1,0 +1,111 @@
+nav {
+    background-color: #252d59;
+    width:100%;
+    position: absolute;
+    top:210px;
+    color:white;
+    
+}
+ol {
+    list-style-type: none;
+    padding:0;
+    width:100%;
+}
+ol li:hover {
+    background-color: #094c80;
+}
+ol li a {
+    display:block;
+    text-decoration: none;
+    width:100%;
+    color:#f0f0f0;
+    font-size:16px;
+}
+
+@media (min-width:700px) {
+    
+    .menu-trigger {
+        display: none;
+    }
+    .nav {
+        text-align: right;
+        height:62px;
+        padding:0 10px;
+        border-top:3px solid #094c80;
+        border-bottom:3px solid #094c80;
+    }
+    ol {
+        margin:0 -4%;
+    }
+    ol li {
+        display: inline-block;
+        line-height: 310%;
+        height:100%;
+        padding: 0 10px;
+    }
+}
+@media (max-width:700px) {
+    
+    .menu-trigger {
+        height:65px;
+        text-align:center;
+        line-height: 300%;
+        cursor:pointer;
+        border-top:2px solid #094c80;
+        border-bottom:2px solid #094c80;
+       
+    }
+    .nav {
+        display:none;
+        text-align: center;
+        
+    }
+    ol {
+        margin:0;
+    }
+    ol li {
+        padding:5px 0;
+        width:100%;
+    }
+    
+}
+.hamburger {
+    width: 35px;
+    height: 28px;
+    border: 0;
+    border-top: 5px solid #ffffff;
+    background: transparent;
+    position: relative;
+    transition: 0.3s transform linear;
+    outline: none;
+    cursor: pointer;
+    top:3px;
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 5px solid #ffffff;
+    transform: translateY(10px);
+}
+
+.hamburger::after {
+    transform: translateY(25px);
+    transition: 0.3s transform linear;
+}
+
+.menu-trigger:hover .hamburger {
+    transform: rotate(45deg) translateY(6px) translateX(5px);
+    border: none;
+}
+
+.menu-trigger:hover .hamburger::after {
+    transform: rotate(-90deg) translateX(-10px);
+}
+
+.highlighted {
+    background-color: #094c80;
+}
